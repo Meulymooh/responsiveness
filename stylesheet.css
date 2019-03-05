@@ -10,59 +10,60 @@
  	font-weight: normal;
  }
 
-/* RESPONSIVENESS */
+ /* HIDE */
+
+/* If the screen size is lower than 300px */
+@media only screen and (max-width: 300px) {
+#medium {display: none;}
+#large {display: none;}
+}
+
+/* If the screen size is between 300 and 768px */
+@media only screen and (min-width: 300px) and (max-width: 768px) {
+#small {display: none;}
+#large {display: none;}
+}
+
+/* If the screen size is larger than 768 */
+@media only screen and (min-width: 768px) {
+#small {display: none;}
+#medium {display: none;}
+}
+
+
+/* DISPLAY */
 
 /* For mobile phones: */
 @media only screen and (max-width: 300px){
+#small {display: inline; width: 100%;}
+#medium {display: inline; width: 100%;}
+#large {display: inline; width: 100%;}
 
-
-[class*="col-"] {
-  width: 100%;
-}
-
-body {
-    background-color: red;
-  }
-h2 {
-	font-size: 18px;
-}
-p {
-	font-size: 14px;
-}
+body {background-color: red;}
+h2 {font-size: 18px;}
+p {font-size: 14px;}
 }
 
 /* For tablets: */
 @media only screen and (min-width: 300px) and (max-width: 768px){
-.col-1 {width: 66%;}
-.col-2 {width: 34%;}
-.col-3 {width: 100%;}
+#small {display: inline; width: 66%;}
+#medium {display: inline; width: 34%;}
+#large {display: inline; width: 100%;}
 
-body {
-    background-color: green;
-  }
-h2 {
-	font-size: 22px;
-}
-p {
-	font-size: 18px;
-}
+body {background-color: green;}
+h2 {font-size: 22px;}
+p {font-size: 18px;}
 }
 
 /* For desktop: */
 @media only screen and (min-width: 768px) {
-.col-1 {width: 33%;}
-.col-2 {width: 33%;}
-.col-3 {width: 34%;}
+#small {display:inline; width: 33%;}
+#medium {display: inline; width: 33%;}
+#large {display: inline; width: 34%;}
 
-body {
-    background-color: blue;
-}
-h2 {
-	font-size: 26px;
-}
-p {
-	font-size: 22px;
-}
+body {background-color: blue;}
+h2 {font-size: 26px;}
+p {font-size: 22px;}
 }
 
 [class*="col-"] {
@@ -77,6 +78,3 @@ p {
   display: table;
 }
 
-
-
-/* DISPLAY */
